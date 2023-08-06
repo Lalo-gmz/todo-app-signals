@@ -10,4 +10,4 @@ import { MainComponent } from "./components/main/main.component";
     imports: [HeaderComponent, FooterComponent, MainComponent]
 })
 
-export class TodoComponent{}
+export class TodosComponent{}

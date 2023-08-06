@@ -10,6 +10,10 @@ export class TodoService {
 	todosSig = signal<TodoInterface[]>([]);
 	filterSig = signal<FilterEnum>(FilterEnum.all)
 
+	changeFilter(filterName: FilterEnum): void{
+		this.filterSig.set(filterName)
+	}
+	
 	addTodo(text: string): void {
 		const newTodo: TodoInterface = {
 			text,
@@ -18,4 +22,5 @@ export class TodoService {
 		};
 		this.todosSig.update((todos) => [...todos, newTodo]);
 	}
+	
 }
